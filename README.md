@@ -1,6 +1,6 @@
 # PreRaise.ai
 
-PreRaise startups **before they go mainstream.** Enter an investment thesis or
+Surface startups **before they go mainstream.** Enter an investment thesis or
 sector — `AI fashion tech`, `developer tools`, `consumer AI` — and PreRaise.ai
 discovers companies gaining early traction and ranks them by signal strength.
 
