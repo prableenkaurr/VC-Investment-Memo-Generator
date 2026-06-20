@@ -1,69 +1,92 @@
-# PreRaise.ai
+# 10-Minute Memo
 
-Surface startups **before they go mainstream.** Enter an investment thesis or
-sector — `AI fashion tech`, `developer tools`, `consumer AI` — and PreRaise.ai
-discovers companies gaining early traction and ranks them by signal strength.
+Generate a **VC-style investment memo from any startup website in under 60 seconds.**
 
-Live: **[surfaced.ai](https://surfaced.ai)**
+Paste a URL → the app scrapes the site → Gemini 2.5 Flash writes the memo.
 
-## How it works
+**GitHub:** [github.com/prableenkaurr/preraise](https://github.com/prableenkaurr/preraise)
 
-For a given sector the app queries three independent sources, server-side, and
-blends them into a single **Surfaced score (0–100)**:
+---
 
-| Signal | Source | What it measures |
-| --- | --- | --- |
-| **HN** | [Hacker News Algolia API](https://hn.algolia.com/api) | Show HN traction over the last 90 days — recency-weighted points + comment velocity. No key required. |
-| **PH** | [ProductHunt API v2 (GraphQL)](https://api.producthunt.com/v2/docs) | Vote velocity on recent launches relative to time since launch. |
-| **Trends** | Google Trends | Search-interest *trajectory* (not absolute volume) for discovered startup names. |
+## What it generates
 
-The Surfaced score renormalizes over whichever sources fired, adds a
-corroboration bonus when a startup shows up on more than one, and nudges by the
-sector's overall Google Trends momentum. Each result card shows the overall
-score, a per-source signal bar with an up / flat / down arrow, and a **"Why
-now"** sentence explaining the single strongest signal.
+| Section | What's covered |
+|---|---|
+| Company Snapshot | Name, one-liner, industry, business model |
+| Problem | Problem statement + why it matters |
+| Product | Core product, key features, differentiation |
+| Market Opportunity | Category, trends, adoption drivers |
+| Competitive Landscape | Competitors, advantages, weaknesses |
+| Team Signals | Hiring activity, growth indicators |
+| Bull Case | Top 3 reasons it could be a category leader |
+| Bear Case | Risks, competitive threats, execution risks |
+| Investment Thesis | One tight VC-associate paragraph |
+| Recommendation | Strong Buy / Worth Further Research / Pass |
+
+Plus a **Confidence Score (0–100)** and an **AI chat panel** for follow-up questions.
+
+---
 
 ## Fund personalization
 
-Append `?fund=` to white-label the app for a specific fund — the navbar, hero,
-and page title all update:
+Append `?fund=` to white-label the entire app for a specific firm — the navbar, hero, page title, and exported PDF title all update automatically.
 
-- `surfaced.ai?fund=PearVC` → **PreRaise.ai for Pear VC**
-- `surfaced.ai?fund=TribeCapital` → **PreRaise.ai for Tribe Capital**
+| Link | Displays as |
+|---|---|
+| `yourdomain.com?fund=PearVC` | **10-Minute Memo for Pear VC** |
+| `yourdomain.com?fund=TribeCapital` | **10-Minute Memo for Tribe Capital** |
+| `yourdomain.com?fund=Sequoia` | **10-Minute Memo for Sequoia** |
+| `yourdomain.com?fund=a16z` | **10-Minute Memo for a16z** |
+| `yourdomain.com?fund=YCombinator` | **10-Minute Memo for Y Combinator** |
+| `yourdomain.com?fund=AnyName` | **10-Minute Memo for Any Name** *(any slug works)* |
 
-Unknown funds are accepted too; camelCase slugs are prettified automatically.
+To add a fund to the known-name lookup (for exact casing), edit `lib/fund.ts`.
+
+---
+
+## Export
+
+- **Export PDF** — browser print dialog, memo-only layout
+- **Export Markdown** — downloads a `.md` file
+- **Copy memo** — full memo to clipboard as Markdown
+
+---
 
 ## Stack
 
-- Next.js 14 (App Router) + TypeScript
+- Next.js 14 App Router + TypeScript
 - Tailwind CSS
-- All third-party API calls run server-side (in `/app/api/scan`) to keep keys off the client
-- Deploys to Vercel as-is
+- Google Gemini 2.5 Flash (structured JSON output via `responseSchema`)
+- Cheerio for web scraping (homepage + about / careers / pricing)
+- Vercel deployment ready
+
+---
 
 ## Local development
 
 ```bash
+git clone https://github.com/prableenkaurr/preraise.git
+cd preraise
 npm install
-cp .env.example .env.local   # optional: add PRODUCTHUNT_TOKEN
+cp .env.example .env.local   # add your GEMINI_API_KEY
 npm run dev                  # http://localhost:3000
 ```
 
-### Environment
+### Environment variables
 
 | Variable | Required | Notes |
-| --- | --- | --- |
-| `PRODUCTHUNT_TOKEN` | Optional | ProductHunt API v2 developer token. Without it the ProductHunt signal is skipped and ranking proceeds on Hacker News + Google Trends. Create one under your [PH API applications](https://www.producthunt.com/v2/oauth/applications). |
+|---|---|---|
+| `GEMINI_API_KEY` | **Yes** | Get one free at [aistudio.google.com](https://aistudio.google.com/app/apikey) |
 
-Hacker News needs no key. Google Trends has no official API — the app hits the
-public frontend endpoints and degrades gracefully (neutral momentum) if they
-rate-limit.
+---
 
-## Deploy
+## Deploy to Vercel
 
 ```bash
-npm run build
+npm run build        # verify build locally first
 vercel --prod
 ```
 
-Set `PRODUCTHUNT_TOKEN` in the Vercel project's environment variables to enable
-the ProductHunt signal in production.
+Set `GEMINI_API_KEY` in your Vercel project → **Settings → Environment Variables**.
+
+Or connect the GitHub repo to Vercel for automatic deployments on every push to `main`.
