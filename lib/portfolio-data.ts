@@ -65,6 +65,166 @@ const FUNDS: Record<string, { name: string; companies: PortfolioSeed[] }> = {
       company("Warby Parker", "Consumer Commerce", 2010, ["Neil Blumenthal", "Dave Gilboa", "Andy Hunt", "Jeff Raider"], ["Wharton", "Repeat founder"], "$535M+", "Public", 2200, 1, 0, 850, 9600000),
     ],
   },
+  "645 ventures": {
+    name: "645 Ventures",
+    companies: [
+      company("Hims & Hers", "Consumer Health", 2017, ["Andrew Dudum"], ["Repeat founder", "Technical founder"], "$197M+", "Public", 900, 12, 0, 1400, 18000000),
+      company("Nomad Health", "Healthcare Marketplace", 2015, ["Alexi Nazem", "Andrei Zimiles"], ["Technical founder", "Ex-McKinsey"], "$20M+", "Series B", 200, 18, 0, 420, 1200000),
+      company("Fabric", "Fintech Infrastructure", 2016, ["Adam Erlebacher", "Hanna Kassis"], ["Repeat founder", "Technical founder"], "$90M+", "Series B", 320, 10, 0, 380, 850000),
+      company("CAIS", "Fintech", 2009, ["Matt Brown"], ["Repeat founder", "Finance background"], "$225M+", "Series C", 400, 8, 0, 290, 720000),
+      company("Bowery Farming", "AgriTech", 2015, ["Irving Fain"], ["Repeat founder", "Technical founder"], "$472M+", "Series C", 600, 5, 0, 640, 2100000),
+    ],
+  },
+  "pear vc": {
+    name: "Pear VC",
+    companies: [
+      company("Branch", "Mobile Attribution", 2014, ["Alex Austin", "Dmitri Gaskin", "Mike Molinet"], ["Stanford", "Technical founder"], "$817M+", "Series F", 1100, 6, 0, 1200, 8500000),
+      company("Athelas", "Healthcare AI", 2016, ["Deepika Bodapati", "Tanay Tandon"], ["Stanford", "Technical founder"], "$132M+", "Series C", 350, 22, 0, 480, 1100000),
+      company("Guardant Health", "Healthcare Diagnostics", 2012, ["Helmy Eltoukhy", "AmirAli Talasaz"], ["Stanford", "Technical founder"], "$1.2B+", "Public", 1800, 9, 0, 760, 4200000),
+      company("Verkada", "Enterprise Security", 2016, ["Filip Kaliszan", "James Ren", "Benjamin Bercovici"], ["Stanford", "Technical founder"], "$360M+", "Series D", 1700, 28, 0, 1100, 6300000),
+      company("Turo", "Consumer Marketplace", 2009, ["Shelby Clark"], ["Repeat founder", "Design founder"], "$500M+", "Late-stage", 900, 4, 0, 2400, 21000000),
+    ],
+  },
+  "unusual ventures": {
+    name: "Unusual Ventures",
+    companies: [
+      company("Harness", "Developer Tools", 2017, ["Jyoti Bansal", "Rajan Singh"], ["Repeat founder", "Ex-AppDynamics"], "$425M+", "Series D", 1100, 19, 2800, 1400, 7200000),
+      company("Starburst", "Data Infrastructure", 2017, ["Justin Borgman", "Matt Fuller", "Kamil Bajda-Pawlikowski"], ["Technical founder", "Academic founder"], "$414M+", "Series D", 600, 14, 4100, 820, 3100000),
+      company("Syndio", "HR Analytics", 2016, ["Zev Eigen", "Maria Colacurcio"], ["Technical founder", "Ex-Oracle"], "$50M+", "Series C", 180, 11, 0, 380, 620000),
+      company("Locus Robotics", "Robotics", 2014, ["Bruce Welty", "Mike Johnson"], ["Technical founder", "Repeat founder"], "$215M+", "Series F", 450, 8, 0, 540, 890000),
+      company("Mabl", "Developer Tools", 2017, ["Izzy Azeri", "Dan Belcher"], ["Repeat founder", "Ex-HubSpot"], "$60M+", "Series C", 200, 10, 820, 640, 1200000),
+    ],
+  },
+  "engineering capital": {
+    name: "Engineering Capital",
+    companies: [
+      company("Persona", "Identity Infrastructure", 2018, ["Rick Song", "Charles Yeh"], ["Technical founder", "Ex-Square"], "$225M+", "Series C", 450, 24, 0, 890, 4100000),
+      company("Cribl", "Data Infrastructure", 2018, ["Clint Sharp", "Ledion Bitincka"], ["Technical founder", "Ex-Splunk"], "$400M+", "Series D", 700, 31, 3200, 1100, 3800000),
+      company("Incident.io", "Developer Tools", 2021, ["Chris Evans", "Pete Hamilton", "Mikey Clarke"], ["Technical founder", "Ex-Monzo"], "$54M+", "Series B", 150, 35, 1400, 760, 980000),
+      company("Replit", "Developer Tools", 2016, ["Amjad Masad", "Faris Masad"], ["Technical founder", "Ex-Facebook"], "$222M+", "Series B", 200, 18, 29000, 4200, 14000000),
+      company("Sentry", "Developer Tools", 2012, ["David Cramer", "Chris Jennings"], ["Technical founder", "Open-source background"], "$217M+", "Series E", 650, 12, 36000, 2100, 9800000),
+    ],
+  },
+  heavybit: {
+    name: "Heavybit",
+    companies: [
+      company("PagerDuty", "DevOps", 2009, ["Andrew Miklas", "Alex Solomon", "Baskar Puvanathasan"], ["Technical founder", "Ex-Amazon"], "$173M+", "Public", 900, 3, 0, 1800, 8200000),
+      company("Fastly", "Cloud Infrastructure", 2011, ["Artur Bergman"], ["Technical founder", "Repeat founder"], "$219M+", "Public", 1100, 2, 0, 1300, 5600000),
+      company("Honeycomb", "Developer Observability", 2016, ["Christine Yen", "Charity Majors"], ["Technical founder", "Ex-Parse"], "$50M+", "Series C", 180, 14, 1900, 860, 1400000),
+      company("Snyk", "Developer Security", 2015, ["Guy Podjarny", "Assaf Hefetz"], ["Repeat founder", "Security background"], "$1.2B+", "Series G", 1400, 7, 5400, 1120, 2700000),
+      company("CircleCI", "Developer Tools", 2011, ["Paul Biggar", "Allen Rohner"], ["Technical founder", "Open-source background"], "$315M+", "Acquired", 500, 4, 4200, 1400, 4100000),
+    ],
+  },
+  "susa ventures": {
+    name: "Susa Ventures",
+    companies: [
+      company("Robinhood", "Fintech", 2013, ["Vlad Tenev", "Baiju Bhatt"], ["Technical founder", "Repeat founder"], "$5.6B+", "Public", 2400, 1, 0, 3200, 45000000),
+      company("Flexport", "Logistics", 2013, ["Ryan Petersen"], ["Repeat founder", "Technical founder"], "$2.2B+", "Series D", 3100, -2, 0, 1400, 9200000),
+      company("Andela", "Future of Work", 2014, ["Jeremy Johnson", "Christina Sass"], ["Repeat founder", "Ex-2U"], "$381M+", "Series E", 500, 6, 0, 840, 2900000),
+      company("Premise", "Data Analytics", 2012, ["Joe Reisinger"], ["Technical founder", "Academic founder"], "$125M+", "Series D", 280, 8, 0, 420, 680000),
+      company("Expanse", "Cybersecurity", 2012, ["Tim Junio", "Matt Kraning"], ["Technical founder", "Academic founder"], "$135M+", "Acquired", 350, 5, 0, 380, 720000),
+    ],
+  },
+  "kindred ventures": {
+    name: "Kindred Ventures",
+    companies: [
+      company("Figma", "Design Software", 2012, ["Dylan Field", "Evan Wallace"], ["Technical founder", "Design-centric"], "$333M+", "Acquired", 1600, 14, 0, 3100, 92000000),
+      company("Lyft", "Consumer Marketplace", 2012, ["Logan Green", "John Zimmer"], ["Repeat founder", "Product founder"], "$4.9B+", "Public", 5000, -4, 0, 2800, 62000000),
+      company("Rigetti Computing", "Deep Tech", 2013, ["Chad Rigetti"], ["Technical founder", "Academic founder"], "$198M+", "Public", 250, 4, 0, 480, 1200000),
+      company("Embark Trucks", "Autonomous Vehicles", 2016, ["Alex Rodrigues", "Brandon Moak"], ["Technical founder", "Academic founder"], "$70M+", "Public", 280, -8, 0, 340, 840000),
+      company("Weights & Biases", "AI Infrastructure", 2017, ["Lukas Biewald", "Shawn Lewis", "Chris Van Pelt"], ["Technical founder", "Ex-CrowdFlower"], "$250M+", "Series C", 450, 22, 9200, 3400, 8100000),
+    ],
+  },
+  "xyz venture capital": {
+    name: "XYZ Venture Capital",
+    companies: [
+      company("Bird", "Micromobility", 2017, ["Travis VanderZanden"], ["Repeat founder", "Ex-Lyft"], "$776M+", "Public", 600, -12, 0, 1200, 8400000),
+      company("Built Robotics", "Robotics", 2016, ["Noah Ready-Campbell"], ["Technical founder", "Ex-Google"], "$188M+", "Series C", 280, 18, 0, 420, 840000),
+      company("Joby Aviation", "Air Mobility", 2009, ["JoeBen Bevirt"], ["Technical founder", "Repeat founder"], "$2.6B+", "Public", 2200, 24, 0, 1800, 4200000),
+      company("Branch Insurance", "Insurtech", 2017, ["Steve Lekas", "Joe Emison"], ["Repeat founder", "Technical founder"], "$147M+", "Series C", 300, 8, 0, 560, 2100000),
+      company("Alto Pharmacy", "Healthcare", 2015, ["Jamie Karraker", "Mattieu Gamache-Asselin"], ["Technical founder", "Repeat founder"], "$360M+", "Series E", 600, 6, 0, 840, 3800000),
+    ],
+  },
+  "costanoa ventures": {
+    name: "Costanoa Ventures",
+    companies: [
+      company("Tealium", "Data Infrastructure", 2008, ["Mike Anderson", "Ali Behnam"], ["Technical founder", "Repeat founder"], "$169M+", "Series F", 650, 5, 0, 720, 2800000),
+      company("Corvus Insurance", "Insurtech", 2017, ["Phil Edmundson", "Madhu Tadikonda"], ["Technical founder", "Repeat founder"], "$166M+", "Series C", 250, 14, 0, 420, 1100000),
+      company("EvenUp", "Legal AI", 2019, ["Rami Karabibar", "Ray Mieszaniec", "David Haber"], ["Technical founder", "Ex-Google"], "$160M+", "Series C", 350, 42, 0, 680, 1800000),
+      company("Zipline", "Drone Logistics", 2014, ["Keller Rinaudo Cliffton"], ["Technical founder", "Repeat founder"], "$892M+", "Late-stage", 1100, 16, 0, 1200, 3400000),
+      company("Domo", "Business Intelligence", 2010, ["Josh James"], ["Repeat founder", "Ex-Omniture"], "$690M+", "Public", 900, -3, 0, 840, 4200000),
+    ],
+  },
+  "wing venture capital": {
+    name: "Wing Venture Capital",
+    companies: [
+      company("Snowflake", "Data Infrastructure", 2012, ["Benoit Dageville", "Thierry Cruanes", "Marcin Zukowski"], ["Technical founder", "Academic founder"], "$3.4B+", "Public", 6800, 14, 0, 1600, 11000000),
+      company("HashiCorp", "Developer Tools", 2012, ["Mitchell Hashimoto", "Armon Dadgar"], ["Technical founder", "Open-source background"], "$347M+", "Acquired", 2400, 6, 68000, 2200, 9400000),
+      company("Verkada", "Enterprise Security", 2016, ["Filip Kaliszan", "James Ren"], ["Stanford", "Technical founder"], "$360M+", "Series D", 1700, 28, 0, 1100, 6300000),
+      company("Weights & Biases", "AI Infrastructure", 2017, ["Lukas Biewald", "Shawn Lewis"], ["Technical founder", "Ex-CrowdFlower"], "$250M+", "Series C", 450, 22, 9200, 3400, 8100000),
+      company("Abnormal AI", "AI Security", 2018, ["Evan Reiser", "Sanjay Jeyakumar"], ["Ex-Twitter", "Technical founder"], "$374M+", "Series D", 900, 36, 0, 240, 460000),
+    ],
+  },
+  "amplify partners": {
+    name: "Amplify Partners",
+    companies: [
+      company("CockroachDB", "Data Infrastructure", 2015, ["Spencer Kimball", "Peter Mattis", "Ben Darnell"], ["Technical founder", "Ex-Google"], "$655M+", "Series F", 750, 12, 29000, 1800, 5200000),
+      company("Teleport", "Developer Security", 2015, ["Ev Kontsevoy", "Alexander Klizhentas"], ["Technical founder", "Repeat founder"], "$110M+", "Series C", 200, 18, 17000, 1200, 2800000),
+      company("Temporal", "Developer Infrastructure", 2019, ["Maxim Fateev", "Samar Abbas"], ["Technical founder", "Ex-Uber"], "$120M+", "Series B", 180, 28, 12000, 1600, 3100000),
+      company("Retool", "Developer Tools", 2017, ["David Hsu", "Martin Raison"], ["Technical founder", "Stanford"], "$145M+", "Series C", 400, 20, 0, 2800, 9800000),
+      company("dbt Labs", "Data Infrastructure", 2016, ["Tristan Handy", "Drew Banin"], ["Technical founder", "Open-source background"], "$414M+", "Series D", 600, 15, 9400, 2400, 6200000),
+    ],
+  },
+  crv: {
+    name: "CRV",
+    companies: [
+      company("Airtable", "Productivity Software", 2012, ["Howie Liu", "Andrew Ofstad", "Emmett Nicholas"], ["Technical founder", "Design founder"], "$1.4B+", "Series F", 900, 8, 0, 4200, 28000000),
+      company("Drift", "Sales Software", 2014, ["David Cancel", "Elias Torres"], ["Repeat founder", "Technical founder"], "$107M+", "Acquired", 600, 2, 0, 1600, 6800000),
+      company("Zendesk", "Customer Support", 2007, ["Mikkel Svane", "Morten Primdahl", "Alexander Aghassipour"], ["Technical founder", "Repeat founder"], "$500M+", "Acquired", 6000, -1, 0, 2100, 18000000),
+      company("Podium", "Local Business SaaS", 2014, ["Eric Rea", "Dennis Steele"], ["Technical founder", "Repeat founder"], "$417M+", "Series D", 1400, 4, 0, 1200, 4800000),
+      company("DoorDash", "Consumer Marketplace", 2013, ["Tony Xu", "Stanley Tang", "Andy Fang"], ["Stanford", "Technical founder"], "$2.5B+", "Public", 23700, 11, 0, 840, 145000000),
+    ],
+  },
+  "emergence capital": {
+    name: "Emergence Capital",
+    companies: [
+      company("Zoom", "Collaboration Software", 2011, ["Eric Yuan"], ["Repeat founder", "Ex-Cisco"], "$740M+", "Public", 7200, -4, 0, 3800, 680000000),
+      company("Veeva Systems", "Vertical SaaS", 2007, ["Peter Gassner", "Matt Wallach"], ["Repeat founder", "Ex-Salesforce"], "$340M+", "Public", 7000, 9, 0, 1200, 7400000),
+      company("Box", "Cloud Storage", 2005, ["Aaron Levie", "Dylan Smith"], ["Repeat founder", "Technical founder"], "$562M+", "Public", 2600, 2, 0, 1400, 14000000),
+      company("Salesforce", "CRM", 1999, ["Marc Benioff", "Parker Harris"], ["Repeat founder", "Ex-Oracle"], "$65M+", "Public", 80000, 6, 0, 4200, 380000000),
+      company("ServiceMax", "Field Service SaaS", 2007, ["Athani Krishna", "Hari Subramanian"], ["Technical founder", "Ex-Siemens"], "$161M+", "Acquired", 450, 3, 0, 480, 2100000),
+    ],
+  },
+  "500 global": {
+    name: "500 Global",
+    companies: [
+      company("Canva", "Design Software", 2013, ["Melanie Perkins", "Cliff Obrecht", "Cameron Adams"], ["Repeat founder", "Design founder"], "$572M+", "Late-stage", 3500, 18, 0, 8400, 210000000),
+      company("Credit Karma", "Fintech", 2007, ["Kenneth Lin", "Ryan Graciano", "Nichole Mustard"], ["Technical founder", "Repeat founder"], "$868M+", "Acquired", 1200, 4, 0, 2800, 42000000),
+      company("Grab", "Super App", 2012, ["Anthony Tan", "Tan Hooi Ling"], ["Repeat founder", "Harvard MBA"], "$10B+", "Public", 8000, 8, 0, 3200, 78000000),
+      company("Talkdesk", "Contact Center AI", 2011, ["Tiago Paiva", "Cristina Fonseca"], ["Technical founder", "Repeat founder"], "$580M+", "Series D", 1800, 6, 0, 840, 3800000),
+      company("Twilio", "Developer Infrastructure", 2008, ["Jeff Lawson", "Evan Cooke", "John Wolthuis"], ["Technical founder", "Ex-Amazon"], "$944M+", "Public", 7000, -8, 0, 2400, 18000000),
+    ],
+  },
+  "bonfire ventures": {
+    name: "Bonfire Ventures",
+    companies: [
+      company("FloQast", "Accounting Software", 2013, ["Mike Whitmire", "Cullen Zandstra", "Chris Sluty"], ["Repeat founder", "Accounting background"], "$100M+", "Series D", 500, 12, 0, 640, 2100000),
+      company("ServiceTitan", "Field Service SaaS", 2012, ["Ara Mahdessian", "Vahe Kuzoyan"], ["Technical founder", "Repeat founder"], "$1.1B+", "Public", 2600, 16, 0, 840, 6400000),
+      company("Common Room", "Community Intelligence", 2020, ["Linda Lian", "Francis Luu", "Tom Kleinpeter", "Pauline Strong"], ["Ex-Microsoft", "Technical founder"], "$50M+", "Series B", 150, 20, 0, 580, 980000),
+      company("Nowsta", "Workforce Management", 2017, ["Matt Tepper"], ["Technical founder", "Repeat founder"], "$41M+", "Series B", 120, 15, 0, 380, 620000),
+      company("Gradguard", "Insurtech", 2009, ["John Fees"], ["Repeat founder", "Finance background"], "$30M+", "Series B", 100, 8, 0, 420, 1800000),
+    ],
+  },
+  "sancus ventures": {
+    name: "Sancus Ventures",
+    companies: [
+      company("Cape Privacy", "AI Infrastructure", 2018, ["Ché Wijesinghe", "Jason Mancuso"], ["Technical founder", "Academic founder"], "$20M+", "Series A", 60, 14, 1200, 280, 180000),
+      company("Pactum", "Enterprise AI", 2019, ["Martin Rand"], ["Technical founder", "Repeat founder"], "$53M+", "Series B", 120, 22, 0, 480, 620000),
+      company("Humanly", "HR AI", 2019, ["Prem Kumar", "Noel Lim"], ["Technical founder", "Ex-Google"], "$14M+", "Series A", 50, 18, 0, 320, 280000),
+      company("Gable", "Workplace Infrastructure", 2020, ["Liza Mash Levin", "Roee Adler"], ["Repeat founder", "Technical founder"], "$18M+", "Series A", 60, 10, 0, 240, 320000),
+      company("Arist", "Learning Platform", 2019, ["Michael Ioffe", "Jake Eaton"], ["Technical founder", "Academic founder"], "$12M+", "Series A", 45, 16, 0, 280, 240000),
+    ],
+  },
   "tribe capital": {
     name: "Tribe Capital",
     companies: [

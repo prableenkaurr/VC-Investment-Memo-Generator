@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Brand } from "@/lib/fund";
 
-const EXAMPLES = ["Greylock", "Sequoia Capital", "Accel", "Sequoia Capital vs Accel"];
+const EXAMPLES = ["645 Ventures", "Pear VC", "Engineering Capital", "Heavybit", "Amplify Partners vs Wing Venture Capital"];
 
 interface PortfolioInputProps {
   brand: Brand;

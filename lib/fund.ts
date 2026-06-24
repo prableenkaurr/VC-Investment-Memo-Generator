@@ -19,6 +19,21 @@ const KNOWN_FUNDS: Record<string, string> = {
   greylock: "Greylock",
   accel: "Accel",
   benchmark: "Benchmark",
+  "645ventures": "645 Ventures",
+  unusualventures: "Unusual Ventures",
+  engineeringcapital: "Engineering Capital",
+  heavybit: "Heavybit",
+  susaventures: "Susa Ventures",
+  kindredventures: "Kindred Ventures",
+  xyzventurecapital: "XYZ Venture Capital",
+  costanoacventures: "Costanoa Ventures",
+  wingventurecapital: "Wing Venture Capital",
+  amplifypartners: "Amplify Partners",
+  crv: "CRV",
+  emergencecapital: "Emergence Capital",
+  "500global": "500 Global",
+  bonfireventures: "Bonfire Ventures",
+  sancusventures: "Sancus Ventures",
 };
 
 export interface Brand {
