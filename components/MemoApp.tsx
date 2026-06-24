@@ -140,8 +140,8 @@ export default function MemoApp({ brand }: { brand: Brand }) {
       <div className="no-print border-b border-line bg-canvas">
         <div className="mx-auto flex max-w-6xl gap-2 px-5 py-3">
           {[
-            ["memo", "Startup Memo"],
             ["portfolio", "Portfolio Analysis"],
+            ["memo", "Startup Memo"],
           ].map(([id, label]) => (
             <button
               key={id}
